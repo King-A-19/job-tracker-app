@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Job Tracker</h1>
+    </header>
+    <main>
+      <section id="dashboard-section">
+        <h2>Dashboard</h2>
+        <div>
+          <div class="grid-cards">
+            <p class="card">
+              Total Applications: <span id="total-all">0</span>
+            </p>
+            <p class="card">Applied: <span id="total-apps">0</span></p>
+            <p class="card">Interviews: <span id="total-itws">0</span></p>
+            <p class="card">Rejections: <span id="total-rejs">0</span></p>
+            <p class="card">Offers: <span id="total-offers">0</span></p>
+          </div>
+        </div>
+      </section>
+      <section id="form-section">
+        <form id="job-form">
+          <fieldset>
+            <legend>Job Information</legend>
+            <div>
+              <label for="company">Company</label>
+              <input
+                id="company"
+                type="text"
+                name="company"
+                placeholder="Company name..."
+                required
+              />
+            </div>
+
+            <div>
+              <label for="role">Role</label>
+              <input
+                id="role"
+                type="text"
+                name="role"
+                placeholder="Type in the role"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option value="applied">Applied</option>
+                <option value="interview">Interview</option>
+                <option value="rejected">Rejected</option>
+                <option value="offer">Offer</option>
+              </select>
+            </div>
+            <div>
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" required />
+            </div>
+          </fieldset>
+          <div>
+            <button type="submit">Add Job</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="jobs-section">
+        <h2>Jobs</h2>
+        <div id="search-bar">
+          <input
+            type="text"
+            id="search-company"
+            placeholder="Search by company..."
+          />
+        </div>
+
+        <div id="filter-buttons">
+          <button data-status="all">All</button>
+          <button data-status="applied">Applied</button>
+          <button data-status="interview">Interview</button>
+          <button data-status="rejected">Rejected</button>
+          <button data-status="offer">Offer</button>
+        </div>
+        <div id="job-list">
+          <p id="empty-state">No jobs added yet</p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="app.js"></script>
+</html>
