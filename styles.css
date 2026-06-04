@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
   background: #f3f4f6;
@@ -196,7 +196,8 @@ button:hover {
 }
 
 #filter-buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
   margin: 10px 0;
 }
@@ -208,6 +209,7 @@ button:hover {
   background: #e5e7eb;
   cursor: pointer;
   transition: 0.2s;
+  white-space: nowrap;
 }
 
 #filter-buttons button.active {
